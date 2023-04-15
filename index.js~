@@ -1,0 +1,35 @@
+// select elements section
+const mapContainer = document.querySelector('body');
+const world = await d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
+const countries = await topojson.feature(world, world.objects.countries);
+
+const width=960;
+const height=600;
+// construct a path generator
+const projection = d3.geoMercator();
+const pathGenerator = d3.geoPath(projection);
+
+// map section
+const svg = d3.select(mapContainer)
+      .append('svg')
+      .attr('width', width)
+      .attr('height', height)
+      // .attr('viewBox', [0, 0, width, height])
+
+
+const countriesG = svg.append('g');
+countriesG
+    .attr('width', width)
+    .attr('height', height)
+    .attr('transform', 'translate(-331, -257) scale(2)')
+    .append('path')
+
+countriesG.selectAll('path')
+    .data(countries.features)
+    .enter()
+    .append('path')
+    .attr("d", pathGenerator)
+    .attr('class', 'country')
+
+
+

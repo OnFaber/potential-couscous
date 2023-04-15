@@ -1,0 +1,163 @@
+*, *::after, *::before{
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+
+img {object-fit: cover;}
+
+.section_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  max-width: 960px;
+  margin: 2rem auto;
+  box-shadow: 5px 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.section_container > h1 {text-transform: capitalize;}
+
+.bg-black {background-color: rgba(0, 0, 0, 0.9);}
+
+.image_container {
+  width: 800px;
+  height: 100%;
+  /* box-shadow: 5px 4px 4px 0 rgba(0, 0, 0, 0.2); */
+}
+
+/* start slider and modal */
+
+#slider-icon {
+  position: absolute;  
+  top: 5rem;
+  left: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(82, 95, 255);
+  cursor: pointer;
+}
+
+#slider-icon > svg {transform: scale(1.5);}
+#slider-icon:hover{
+  transform: scale(1.1);
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-dialog {
+  max-width: 600px;
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  transform: scale(1.5);
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  transform: scale(1.5);
+}
+
+/* end slider and modal style */
+
+/* start offcanvas */
+#offcanvas-biography {
+  position: absolute;  
+  bottom: 5rem;
+  right: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(249, 105, 215);
+  cursor: pointer;
+}
+#offcanvas-biography > svg {
+  transform: scale(1.7);
+}
+
+#offcanvas-biography:hover{
+  transform: scale(1.1);
+}
+
+/* end offcanvas */
+
+/* map icon */
+#pin_map {
+  position: absolute;  
+  top: 5rem;
+  right: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(249, 105, 215);
+  cursor: pointer;
+}
+#pin_map > svg {
+  transform: scale(1.7);
+}
+
+#pin_map:hover{
+  transform: scale(1.1);
+}
+/* end map icon */
+
+.d-none {display: none;}
+.d-block {display: block}
+
+/* start map section */
+#map_section {
+  max-width: 700px;
+  min-width: 470px;
+  max-height: 650px;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+#map_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #cfe2ef;
+}
+
+.country {
+  stroke: #2d2d2d;
+  stroke-width: .25;
+}
+
+.country:hover {
+  stroke: #020202;
+  stroke-width: 5;
+}
+
+.water {
+  fill: #cfe2ef;
+}
+
+svg { display: block; }
+
+#color-legend{
+  bottom: 0px;
+  right: 0px;
+  background-color: #fff;
+}
+
+/* end map section */
